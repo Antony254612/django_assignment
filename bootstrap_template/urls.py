@@ -5,5 +5,6 @@ from . import views
 app_name = 'bootstrap_template'
 
 urlpatterns = [
-    path('', views.dashboard, name='dashboard'),
+    path('', views.dashboard, name='home'),
+    path('dashboard/', views.dashboard, name='dashboard'),
 ]
