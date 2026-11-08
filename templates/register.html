@@ -1,0 +1,216 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>SB Admin 2 - Register</title>
+
+    <!-- Font Awesome -->
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}"
+          rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- SB Admin 2 CSS -->
+    <link href="{% static 'css/sb-admin-2.min.css' %}"
+          rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <!-- Outer Card -->
+        <div class="card o-hidden border-0 shadow-lg my-5">
+
+            <div class="card-body p-0">
+
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+
+                    <!-- Registration Background Image -->
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image">
+                    </div>
+
+                    <!-- Registration Form Section -->
+                    <div class="col-lg-7">
+
+                        <div class="p-5">
+
+                            <div class="text-center">
+
+                                <h1 class="h4 text-gray-900 mb-4">
+                                    Create an Account!
+                                </h1>
+
+                            </div>
+
+                            <!-- Registration Form -->
+                            <form class="user" method="POST">
+
+                                {% csrf_token %}
+
+                                <!-- First Name and Last Name -->
+                                <div class="form-group row">
+
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+
+                                        <input
+                                            type="text"
+                                            class="form-control form-control-user"
+                                            id="first_name"
+                                            name="first_name"
+                                            placeholder="First Name"
+                                            autocomplete="given-name"
+                                            required>
+
+                                    </div>
+
+                                    <div class="col-sm-6">
+
+                                        <input
+                                            type="text"
+                                            class="form-control form-control-user"
+                                            id="last_name"
+                                            name="last_name"
+                                            placeholder="Last Name"
+                                            autocomplete="family-name"
+                                            required>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Email Address -->
+                                <div class="form-group">
+
+                                    <input
+                                        type="email"
+                                        class="form-control form-control-user"
+                                        id="email"
+                                        name="email"
+                                        placeholder="Email Address"
+                                        autocomplete="email"
+                                        required>
+
+                                </div>
+
+                                <!-- Password and Confirm Password -->
+                                <div class="form-group row">
+
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+
+                                        <input
+                                            type="password"
+                                            class="form-control form-control-user"
+                                            id="password"
+                                            name="password"
+                                            placeholder="Password"
+                                            autocomplete="new-password"
+                                            required>
+
+                                    </div>
+
+                                    <div class="col-sm-6">
+
+                                        <input
+                                            type="password"
+                                            class="form-control form-control-user"
+                                            id="confirm_password"
+                                            name="confirm_password"
+                                            placeholder="Repeat Password"
+                                            autocomplete="new-password"
+                                            required>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Register Button -->
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary btn-user btn-block">
+
+                                    Register Account
+
+                                </button>
+
+                                <hr>
+
+                                <!-- Google Registration -->
+                                <a href="#"
+                                   class="btn btn-google btn-user btn-block">
+
+                                    <i class="fab fa-google fa-fw"></i>
+                                    Register with Google
+
+                                </a>
+
+                                <!-- Facebook Registration -->
+                                <a href="#"
+                                   class="btn btn-facebook btn-user btn-block">
+
+                                    <i class="fab fa-facebook-f fa-fw"></i>
+                                    Register with Facebook
+
+                                </a>
+
+                            </form>
+
+                            <hr>
+
+                            <!-- Forgot Password Link -->
+                            <div class="text-center">
+
+                                <a class="small" href="/forgot-password/">
+                                    Forgot Password?
+                                </a>
+
+                            </div>
+
+                            <!-- Login Link -->
+                            <div class="text-center">
+
+                                <a class="small" href="/login/">
+                                    Already have an account? Login!
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Bundle -->
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- jQuery Easing -->
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- SB Admin 2 JavaScript -->
+    <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+
+</body>
+
+</html>
